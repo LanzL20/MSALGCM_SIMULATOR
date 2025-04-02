@@ -107,7 +107,7 @@ class Tape(datastructure):
         read, replacement=symbol.split("/")
         self.pointer_x+=1
         if self.pointer_x>=len(self.tape)-1:
-            tape=self.tape+"#"
+            self.tape=self.tape+"#"
         self.tape = self.tape[:self.pointer_x] + replacement + self.tape[self.pointer_x+1:]
         print("tape: ", self.tape)
         char=self.tape[self.pointer_x]

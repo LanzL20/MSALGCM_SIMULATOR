@@ -14,7 +14,7 @@ class Simulation:
         self.machines.append(machine)
 
     def simulate_step(self):
-        if self.number_of_steps==500:
+        if self.number_of_steps==5000:
             print("Maximum number of steps reached")
             return
         new_machines=[]
