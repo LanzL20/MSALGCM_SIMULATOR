@@ -34,10 +34,9 @@ class Simulation:
                 self.machines.remove(machine)
         self.number_of_steps+=1
         if(len(self.accepted_machines)>0):
-            print("Accepted")
             self.status=Status.ACCEPTED
             for i in range(len(self.machines)):
-                self.machines.pop(i)
+                self.machines.pop(0)
 
         return 1
         
