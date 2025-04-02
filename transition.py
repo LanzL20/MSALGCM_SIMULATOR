@@ -1,3 +1,4 @@
+from state import State_Types
 class Transition:
     source = None
     target = None
@@ -18,4 +19,6 @@ class Transition:
         self.transition_type=transition_type
 
     def __str__(self):
-        return f"{self.transition_type} Transition {self.source} -> {self.target} on a {self.symbol} WRITES/READS: {self.memory_symbol} on the memory object: {self.memory_object}"
+        if self.transition_type==State_Types.PRINT:
+            return f"{self.transition_type.value} Transition {self.source} -> {self.target} output: {self.symbol} WRITES/READS: {self.replacement} on the memory object: {self.memory_object}"
+        return f"{self.transition_type.value} Transition {self.source} -> {self.target} on a {self.symbol} WRITES/READS: {self.memory_symbol} on the memory object: {self.memory_object}"
